@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gráfico 2D Interativo</title>
+  <!-- Importa o CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gráfico 2D Interativo em SVG</h1>
+
+  <!-- Contêiner para o gráfico -->
+  <div class="graph-container">
+    <!-- SVG com viewBox definido, onde desenharemos eixos e ponto -->
+    <svg id="myChart" viewBox="0 0 500 300" width="100%" height="100%">
+      <!-- Desenhando os eixos X e Y -->
+      <!-- Eixo X -->
+      <line x1="40" y1="250" x2="480" y2="250"
+            stroke="#333" stroke-width="2" />
+      <!-- Eixo Y -->
+      <line x1="40" y1="20" x2="40" y2="250"
+            stroke="#333" stroke-width="2" />
+
+      <!-- Podemos adicionar pequenas marcas de escala, se quisermos, ou deixar simples -->
+      <!-- Marcas de escala para X -->
+      <g>
+        <text x="40" y="270" text-anchor="middle">0</text>
+        <text x="240" y="270" text-anchor="middle">50</text>
+        <text x="440" y="270" text-anchor="middle">100</text>
+      </g>
+      <!-- Marcas de escala para Y -->
+      <g>
+        <text x="20" y="250" text-anchor="end">0</text>
+        <text x="20" y="125" text-anchor="end">50</text>
+        <text x="30" y="20" text-anchor="end">100</text>
+      </g>
+      <!-- Circulo (ponto) que vai se mover conforme o valor do slider -->
+      <circle id="dataPoint" cx="40" cy="250" r="6" fill="red" />
+    </svg>
+  </div>
+
+  <!-- Controles para interação -->
+  <div class="controls">
+    <label for="xSlider">Valor de X:</label>
+    <!-- Slider que varia de 0 a 100 (pode ajustar se quiser) -->
+    <input type="range" id="xSlider" min="0" max="100" value="50" />
+  </div>
+
+  <!-- Importa o JS no final do body -->
+  <script src="script.js"></script>
+</body>
+</html>
+

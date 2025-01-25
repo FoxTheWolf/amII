@@ -1,0 +1,68 @@
+/* Reset básico para tirar margens padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Contêiner do gráfico */
+.graph-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Ajusta a aparência das linhas e do círculo no SVG, se quiser customizar ainda mais */
+#myChart {
+  background: #fff;
+  border: 2px solid #ccc;
+}
+
+/* Estilizando controles */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilize o slider (input[type="range"]) se quiser deixá-lo mais bonito */
+input[type="range"] {
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Media queries para ajustar layout para telas menores */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .graph-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #myChart {
+    width: 100%;
+    height: auto;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

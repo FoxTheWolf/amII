@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>SVG</title>
+</head>
+
+<body>
+
+  <h1>SVG via &lt;svg&gt; inline</h1>
+  <!-- O SVG é importado como inline -->
+  <svg width="200" height="200" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="50" fill="red" />
+  </svg>
+
+  <h1>SVG via &lt;img&gt;</h1>
+  <!-- O SVG é importado como imagem -->
+  <img src="img/desenho.svg" alt="desenho importado como arquivo externo" />
+
+  <h1>SVG via &lt;object&gt;</h1>
+  <!-- O SVG é importado como objeto -->
+  <object data="img/desenho.svg" type="image/svg+xml" width="200" height="200">
+    Seu navegador n o suporta o elemento <code>object</code>.
+  </object>
+
+</body>
+</html>
